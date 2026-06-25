@@ -37,7 +37,6 @@
       }
     </style>
   </defs>
-  <g transform="translate(45.71,139.41) rotate(180)">
   <g
      id="Duct_Sensor_Generic">
     <g
@@ -420,5 +419,4 @@
          id="rect53" />
     </g>
   </g>
-</g>
 </svg>

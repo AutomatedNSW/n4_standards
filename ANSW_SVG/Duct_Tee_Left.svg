@@ -2,12 +2,12 @@
 <svg
    id="Layer_2"
    data-name="Layer 2"
-   viewBox="0 0 240.28875 199.08"
+   viewBox="0 0 199.08 240.28875"
    version="1.1"
    sodipodi:docname="Duct_Tee.svg"
    inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
-   width="240.28876"
-   height="199.08"
+   width="199.08"
+   height="240.28875"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@
       }
     </style>
   </defs>
-  <g transform="translate(240.28875,199.08) rotate(180)">
+  <g transform="translate(199.08,0) rotate(90)">
   <g
      id="Duct_Tee"
      transform="translate(0,-38.24)">

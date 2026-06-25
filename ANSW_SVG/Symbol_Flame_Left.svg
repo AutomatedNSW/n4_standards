@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #acb6dd;
+      }
+    </style>
+  </defs>
+  <g id="Symbol_Flame" transform="translate(0,120) rotate(-90)">
+    <path class="cls-1" d="M60,154C26,141,16,103,33,74c10-17,12-29,8-44c15,12,22,25,22,40c9-20,8-38-3-58c33,18,45,57,36,92c-7,27-15,41-36,50ZM60,128c14-6,19-23,13-37c-3-7-3-13-1-19c-9,7-13,18-11,29c-7-9-8-19-5-28c-12,11-15,30-7,43c4,6,7,10,11,12Z"/>
+  </g>
+</svg>

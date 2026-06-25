@@ -39,7 +39,6 @@
       }
     </style>
   </defs>
-  <g transform="translate(240.28875,199.08) rotate(180)">
   <g
      id="Duct_Tee"
      transform="translate(0,-38.24)">
@@ -49,5 +48,4 @@
        id="path1"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
   </g>
-</g>
 </svg>
