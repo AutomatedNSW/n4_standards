@@ -12,56 +12,47 @@
   <layer name="PageTemplate" status="normal"/>
 </layers>
 <content>
-<FlowPane align="fill" rowAlign="fill" hgap="0" vgap="0" background="#32324d">
+<FlowPane align="center" rowAlign="top" hgap="0" vgap="0" background="#32324d">
 
-  <BorderPane padding="10.0 0.0 10.0 10.0" border="bottom(3.0 solid #a5a5ba)">
+  <ResponsivePane maxWidth="33.0%" minWidth="5.0%">
 
-    <CanvasPane name="content" viewSize="50.0,50.0" minScaleFactor="1.0">
+    <CanvasPane name="content" viewSize="250.0,50.0">
 
-      <Picture image="file:^ANSW Graphics/Customer/customer_logo_white.png" scale="fitRatio"/>
-
-    </CanvasPane>
-
-  </BorderPane>
-
-  <BorderPane padding="10.0 0.0" border="bottom(3.0 solid #a5a5ba)">
-
-    <CanvasPane name="content" viewSize="400.0,50.0" halign="fill" valign="fill">
-
-      <BoundLabel layout="90.0,0.0,290.0,50.0" font="bold 26.0pt SansSerif" foreground="#e0e0e0">
-        <BoundLabelBinding ord="$(device)">
-          <ObjectToString name="text" format="%displayName%"/>
-        </BoundLabelBinding>
-        <WsAnnotation name="wsAnnotation" value="2,2,8"/>
-      </BoundLabel>
+      <Picture image="file:^ANSW_Graphics/Apple_Logo.png" scale="fitRatio"/>
 
     </CanvasPane>
 
-  </BorderPane>
-
-  <BorderPane padding="10.0 0.0" border="bottom(3.0 solid #a5a5ba)">
-
-    <CanvasPane name="content" viewSize="200.0,50.0" halign="fill" valign="fill">
-
-      <BoundLabel layout="35.0,0.0,150.0,20.0" font="bold 14.0pt SansSerif" foreground="#e0e0e0" halign="right">
-        <BoundLabelBinding ord="station:|slot:/">
-          <ObjectToString name="text" format="%time()%"/>
-        </BoundLabelBinding>
-        <WsAnnotation name="wsAnnotation" value="2,2,8"/>
-      </BoundLabel>
-
-      <BoundLabel layout="55.0,20.0,130.0,20.0" font="bold 14.0pt SansSerif" foreground="#e0e0e0" halign="right">
-        <BoundLabelBinding ord="station:|slot:/">
-          <ObjectToString name="text" format="Logged in: %user()%"/>
-        </BoundLabelBinding>
-        <WsAnnotation name="wsAnnotation" value="2,2,8"/>
-      </BoundLabel>
-
-    </CanvasPane>
-
-  </BorderPane>
+  </ResponsivePane>
 
   <LayerTag name="LayerTag" layerName="PageTemplate"/>
+
+  <ResponsivePane maxWidth="33.0%" minWidth="5.0%">
+
+    <BoundLabel name="content" font="bold 26.0pt SansSerif" foreground="#e0e0e0" halign="fill" valign="fill" textToIconAlign="center">
+      <BoundLabelBinding ord="$(device)">
+        <ObjectToString name="text" format="%displayName%"/>
+      </BoundLabelBinding>
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+  </ResponsivePane>
+
+  <ResponsivePane maxWidth="33.0%">
+
+    <BoundLabel name="content" font="bold 14.0pt SansSerif" foreground="#e0e0e0" halign="right">
+      <BoundLabelBinding ord="station:|slot:/">
+        <ObjectToString name="text" format="%time()% \nLogged in: %user()%"/>
+      </BoundLabelBinding>
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+  </ResponsivePane>
+
+  <ResponsivePane minWidth="100.0%" forceNewRow="true">
+
+    <Line name="content" fill="#a5a5ba" stroke="#a5a5ba" pen="5.0" geom="0.0,0.0 10000.0,0.0"/>
+
+  </ResponsivePane>
 
 </FlowPane>
 </content>
