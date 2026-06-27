@@ -12,13 +12,13 @@
   <layer name="PageTemplate" status="normal"/>
 </layers>
 <content>
-<FlowPane align="center" rowAlign="top" hgap="0" vgap="0" background="#32324d">
+<FlowPane align="center" hgap="1" background="#32324d">
 
   <ResponsivePane maxWidth="33.0%" minWidth="5.0%">
 
-    <CanvasPane name="content" viewSize="250.0,50.0">
+    <CanvasPane name="content" viewSize="75.0,75.0" halign="left" valign="bottom">
 
-      <Picture image="file:^ANSW_Graphics/Apple_Logo.png" scale="fitRatio"/>
+      <Picture layout="0.0,10.0,50.0,50.0" image="file:^ANSW_Graphics/Apple_Logo.png" scale="fitRatio" valign="bottom"/>
 
     </CanvasPane>
 
@@ -39,18 +39,29 @@
 
   <ResponsivePane maxWidth="33.0%">
 
-    <BoundLabel name="content" font="bold 14.0pt SansSerif" foreground="#e0e0e0" halign="right">
-      <BoundLabelBinding ord="station:|slot:/">
-        <ObjectToString name="text" format="%time()% \nLogged in: %user()%"/>
-      </BoundLabelBinding>
-      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
-    </BoundLabel>
+    <CanvasPane name="content" viewSize="250.0,50.0" halign="right">
+
+      <BoundLabel font="bold 14.0pt SansSerif" foreground="#e0e0e0" halign="right" textToIconAlign="center" padding="0.0 50.0 0.0 0.0">
+        <BoundLabelBinding ord="station:|slot:/">
+          <ObjectToString name="text" format="Logged in: %user()%"/>
+        </BoundLabelBinding>
+        <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+      </BoundLabel>
+
+      <BoundLabel layout="10.0,10.0,100.0%,100.0%" font="bold 14.0pt SansSerif" foreground="#e0e0e0" halign="right" textToIconAlign="center" padding="0.0 50.0 0.0 0.0">
+        <BoundLabelBinding ord="station:|slot:/">
+          <ObjectToString name="text" format="%time()%"/>
+        </BoundLabelBinding>
+        <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+      </BoundLabel>
+
+    </CanvasPane>
 
   </ResponsivePane>
 
-  <ResponsivePane minWidth="100.0%" forceNewRow="true">
+  <ResponsivePane maxWidth="100.0%" minWidth="100.0%" forceNewRow="true">
 
-    <Line name="content" fill="#a5a5ba" stroke="#a5a5ba" pen="5.0" geom="0.0,0.0 10000.0,0.0"/>
+    <Line name="content" fill="#a5a5ba" stroke="#a5a5ba" pen="5.0" geom="0.0,10.0 10000.0,10.0"/>
 
   </ResponsivePane>
 

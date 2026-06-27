@@ -23,7 +23,7 @@
 
   <ResponsivePane maxWidth="33.0%" minWidth="5.0%">
 
-    <Label name="content" text="Building &#xa; 7777 Towne Centre Drive&#xa;San Diego, CA" font="bold 18.0pt SansSerif" foreground="#e0e0e0" halign="left" textToIconAlign="left" wordWrapEnabled="true">
+    <Label name="content" text="Building &#xa;7777 Towne Centre Drive&#xa;San Diego, CA" font="bold 18.0pt SansSerif" foreground="#e0e0e0" halign="left" textToIconAlign="left" wordWrapEnabled="true">
       <WidgetIdBinding/>
     </Label>
 

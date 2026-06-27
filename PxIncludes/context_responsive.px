@@ -16,53 +16,127 @@
   <layer name="PageTemplate" status="normal"/>
 </layers>
 <content>
-<FlowPane align="fill" rowAlign="fill" hgap="0" vgap="0" background="#32324d">
+<FlowPane align="fill" background="#32324d">
 
-  <BorderPane name="BorderPane" padding="10.0 0.0 10.0 10.0" border="right(3.0 solid #a5a5ba)">
+  <ResponsivePane name="ResponsivePane3" minWidth="50.0" forceNewRow="true">
 
-    <CanvasPane name="content" viewSize="150.0,500.0" minScaleFactor="1.0">
+    <ExpandablePane name="content" expanderHalign="center" summaryBackground="#32324d">
 
-      <HyperlinkLabel name="HyperlinkLabel" layout="0.0,116.0,150.0,30.0" text="Air Systems" font="bold underline 18.0pt SansSerif" foreground="#e4e9ff"/>
+      <Label name="summary" text="Alarms              " font="bold 16.0pt Consolas" foreground="#32324d" background="#ffa869" textToIconAlign="center"/>
 
-      <HyperlinkLabel name="HyperlinkLabel1" layout="0.0,87.0,150.0,30.0" text="Chilled Water" font="bold underline 18.0pt SansSerif" foreground="#e4e9ff"/>
+      <FlowPane name="expansion" rowAlign="top" hgap="0" vgap="1" background="#32324d">
 
-      <HyperlinkLabel name="HyperlinkLabel2" layout="0.0,58.0,150.0,30.0" text="Hot Water" font="bold underline 18.0pt SansSerif" foreground="#e4e9ff"/>
+        <LayerTag name="LayerTag" layerName="PageTemplate"/>
 
-      <HyperlinkLabel name="HyperlinkLabel3" layout="0.0,174.0,150.0,30.0" text="Switchgear" font="bold underline 18.0pt SansSerif" foreground="#e4e9ff"/>
+        <ResponsivePane name="ResponsivePane" maxWidth="25.0%" minWidth="pref">
 
-      <HyperlinkLabel name="HyperlinkLabel4" layout="0.0,145.0,150.0,30.0" text="Generator" font="bold underline 18.0pt SansSerif" foreground="#e4e9ff"/>
+          <BoundTable name="content">
+            <TableBinding name="TableBinding" ord="$(device)|bql:select name as &#x27;Point Name&#x27;,slotPath as &#x27;Location&#x27;,out as &#x27;Value @ Priority&#x27; from control:ControlPoint where status.alarm = &#x27;true&#x27;"/>
+          </BoundTable>
 
-      <HyperlinkLabel name="HyperlinkLabel6" layout="0.0,0.0,150.0,30.0" text="Dashboard" font="bold underline 18.0pt SansSerif" foreground="#e4e9ff"/>
+        </ResponsivePane>
 
-      <HyperlinkLabel name="HyperlinkLabel7" layout="0.0,203.0,150.0,30.0" text="Floor 1" font="bold underline 18.0pt SansSerif" foreground="#e4e9ff"/>
+      </FlowPane>
 
-      <HyperlinkLabel name="HyperlinkLabel8" layout="0.0,233.0,150.0,30.0" text="Floor 2" font="bold underline 18.0pt SansSerif" foreground="#e4e9ff"/>
+    </ExpandablePane>
 
-      <HyperlinkLabel name="HyperlinkLabel9" layout="0.0,262.0,150.0,30.0" text="Floor 3" font="bold underline 18.0pt SansSerif" foreground="#e4e9ff"/>
+  </ResponsivePane>
 
-      <HyperlinkLabel name="HyperlinkLabel10" layout="0.0,291.0,150.0,30.0" text="Floor 4" font="bold underline 18.0pt SansSerif" foreground="#e4e9ff"/>
+  <ResponsivePane name="ResponsivePane2" minWidth="50.0" forceNewRow="true">
 
-      <HyperlinkLabel name="HyperlinkLabel11" layout="0.0,320.0,150.0,30.0" text="Floor 5" font="bold underline 18.0pt SansSerif" foreground="#e4e9ff"/>
+    <ExpandablePane name="content" expanderHalign="left" summaryBackground="#32324d">
 
-      <HyperlinkLabel name="HyperlinkLabel12" layout="0.0,349.0,150.0,30.0" text="Floor 6" font="bold underline 18.0pt SansSerif" foreground="#e4e9ff"/>
+      <Label name="summary" text="Diagnostics         " font="bold 16.0pt Consolas" foreground="#32324d" background="#ffa869" textToIconAlign="center"/>
 
-      <HyperlinkLabel name="HyperlinkLabel13" layout="0.0,378.0,150.0,30.0" text="Floor 7" font="bold underline 18.0pt SansSerif" foreground="#e4e9ff"/>
+      <FlowPane name="expansion" rowAlign="top" hgap="0" vgap="1" background="#32324d">
 
-      <HyperlinkLabel name="HyperlinkLabel14" layout="0.0,407.0,150.0,30.0" text="Floor 8" font="bold underline 18.0pt SansSerif" foreground="#e4e9ff"/>
+        <LayerTag name="LayerTag" layerName="PageTemplate"/>
 
-      <HyperlinkLabel name="HyperlinkLabel15" layout="0.0,436.0,150.0,30.0" text="Floor 9" font="bold underline 18.0pt SansSerif" foreground="#e4e9ff"/>
+        <ResponsivePane name="ResponsivePane" maxWidth="25.0%" minWidth="pref" forceNewRow="true">
 
-      <HyperlinkLabel name="HyperlinkLabel16" layout="0.0,465.0,150.0,30.0" text="Floor 10" font="bold underline 18.0pt SansSerif" foreground="#e4e9ff"/>
+          <BoundTable name="content">
+            <TableBinding name="TableBinding" ord="$(device)|bql:select name as &#x27;Point Name&#x27;,slotPath as &#x27;Location&#x27;,out as &#x27;Value @ Priority&#x27; from control:ControlPoint where displayName like &#x27;%Diag&#x27;"/>
+          </BoundTable>
 
-      <HyperlinkLabel name="HyperlinkLabel5" layout="0.0,29.0,150.0,30.0" text="Alarm Console" font="bold underline 18.0pt SansSerif" foreground="#e4e9ff"/>
+        </ResponsivePane>
 
-    </CanvasPane>
+      </FlowPane>
 
-    <LayerTag name="LayerTag" layerName="PageTemplate"/>
+    </ExpandablePane>
 
-  </BorderPane>
+  </ResponsivePane>
 
-  <LayerTag name="LayerTag" layerName="PageTemplate"/>
+  <ResponsivePane name="ResponsivePane" minWidth="50.0" forceNewRow="true">
+
+    <ExpandablePane name="content" expanderHalign="left" summaryBackground="#32324d">
+
+      <Label name="summary" text="Overrides           " font="bold 16.0pt Consolas" foreground="#32324d" background="#ffa869" textToIconAlign="center"/>
+
+      <FlowPane name="expansion" rowAlign="top" hgap="0" vgap="1" background="#32324d">
+
+        <LayerTag name="LayerTag" layerName="PageTemplate"/>
+
+        <ResponsivePane name="ResponsivePane" maxWidth="25.0%" minWidth="pref">
+
+          <BoundTable name="content">
+            <TableBinding name="TableBinding" ord="$(device)|bql:select name as &#x27;Point Name&#x27;,slotPath as &#x27;Location&#x27;,out as &#x27;Value @ Priority&#x27; from control:ControlPoint where status.overridden = &#x27;true&#x27;"/>
+          </BoundTable>
+
+        </ResponsivePane>
+
+      </FlowPane>
+
+    </ExpandablePane>
+
+  </ResponsivePane>
+
+  <ResponsivePane name="ResponsivePane1" minWidth="50.0" forceNewRow="true">
+
+    <ExpandablePane name="content" expanderHalign="left" summaryBackground="#32324d">
+
+      <Label name="summary" text="Faults              " font="bold 16.0pt Consolas" foreground="#32324d" background="#ffa869" textToIconAlign="center"/>
+
+      <FlowPane name="expansion" rowAlign="top" hgap="0" vgap="1" background="#32324d">
+
+        <LayerTag name="LayerTag" layerName="PageTemplate"/>
+
+        <ResponsivePane name="ResponsivePane" maxWidth="25.0%" minWidth="pref" forceNewRow="true">
+
+          <BoundTable name="content">
+            <TableBinding name="TableBinding" ord="$(device)|bql:select name as &#x27;Point Name&#x27;,slotPath as &#x27;Location&#x27;,out as &#x27;Value @ Priority&#x27; from control:ControlPoint where status.fault = &#x27;true&#x27;"/>
+          </BoundTable>
+
+        </ResponsivePane>
+
+      </FlowPane>
+
+    </ExpandablePane>
+
+  </ResponsivePane>
+
+  <ResponsivePane name="ResponsivePane4" minWidth="50.0" forceNewRow="true">
+
+    <ExpandablePane name="content" expanderHalign="left" summaryBackground="#32324d">
+
+      <Label name="summary" text="Setpoints           " font="bold 16.0pt Consolas" foreground="#32324d" background="#ffa869" textToIconAlign="center"/>
+
+      <FlowPane name="expansion" rowAlign="top" hgap="0" vgap="1" background="#32324d">
+
+        <LayerTag name="LayerTag" layerName="PageTemplate"/>
+
+        <ResponsivePane name="ResponsivePane" maxWidth="25.0%" minWidth="pref" forceNewRow="true">
+
+          <BoundTable name="content">
+            <TableBinding name="TableBinding" ord="$(device)|bql:select name as &#x27;Point Name&#x27;,slotPath as &#x27;Location&#x27;,out as &#x27;Value @ Priority&#x27; from control:ControlPoint where displayName like &#x27;%Stpt&#x27;"/>
+          </BoundTable>
+
+        </ResponsivePane>
+
+      </FlowPane>
+
+    </ExpandablePane>
+
+  </ResponsivePane>
 
 </FlowPane>
 </content>
