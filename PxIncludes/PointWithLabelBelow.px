@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<FlowPane align="center">
+
+  <ResponsivePane forceNewRow="true">
+
+    <BoundLabel name="content" font="bold 14.0pt Open Sans" foreground="#a5a5ba" halign="fill" valign="fill">
+      <BoundLabelBinding ord="$(point)" statusEffect="color">
+        <ObjectToString name="text" format="%out.value%"/>
+      </BoundLabelBinding>
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+      <PopupBinding ord="$(point)|view:webChart:ChartWidget" title="History" modal="true"/>
+    </BoundLabel>
+
+  </ResponsivePane>
+
+  <ResponsivePane>
+
+    <Label name="content" text="%out.value%" font="16.0pt Open Sans" foreground="#a5a5ba">
+      <ValueBinding ord="$(point)">
+        <ObjectToString name="text" format="%displayName%"/>
+      </ValueBinding>
+    </Label>
+
+  </ResponsivePane>
+
+</FlowPane>
+</content>
+</px>

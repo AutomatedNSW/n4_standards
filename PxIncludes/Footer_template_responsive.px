@@ -13,45 +13,50 @@
   <layer name="PageTemplate" status="normal"/>
 </layers>
 <content>
-<FlowPane align="center" rowAlign="top" hgap="0" vgap="0" background="#32324d">
+<BorderPane padding="0.0 0.0 2.0 0.0" border="top(3.0 solid #a5a5ba)">
 
-  <ResponsivePane minWidth="100.0%" forceNewRow="true">
+  <FlowPane name="content" align="center" rowAlign="top" hgap="0" vgap="0" background="#32324d">
 
-    <Line name="content" fill="#a5a5ba" stroke="#a5a5ba" pen="3.0" geom="0.0,0.0 10000.0,0.0"/>
+    <ResponsivePane minWidth="100.0%" forceNewRow="true">
 
-  </ResponsivePane>
+      <Line name="content" fill="#a5a5ba" stroke="#a5a5ba" pen="3.0" geom="0.0,0.0 10000.0,0.0"/>
 
-  <ResponsivePane maxWidth="33.0%" minWidth="5.0%">
+    </ResponsivePane>
 
-    <Label name="content" text="Building &#xa;7777 Towne Centre Drive&#xa;San Diego, CA" font="bold 18.0pt SansSerif" foreground="#e0e0e0" halign="left" textToIconAlign="left" wordWrapEnabled="true">
-      <WidgetIdBinding/>
-    </Label>
+    <ResponsivePane maxWidth="33.0%" minWidth="5.0%">
 
-  </ResponsivePane>
+      <Label name="content" text="Building &#xa;7777 Towne Centre Drive&#xa;San Diego, CA&#xa;  " font="bold 18.0pt SansSerif" foreground="#e0e0e0" halign="left" valign="top" textToIconAlign="left" textIconGap="1.0">
+        <WidgetIdBinding/>
+        <LayerTag name="LayerTag" layerName="PageTemplate"/>
+      </Label>
 
-  <LayerTag name="LayerTag" layerName="PageTemplate"/>
+    </ResponsivePane>
 
-  <ResponsivePane maxWidth="33.0%" minWidth="5.0%">
+    <LayerTag name="LayerTag" layerName="PageTemplate"/>
 
-    <BoundLabel name="content" font="bold 26.0pt SansSerif" foreground="#e0e0e0" halign="fill" valign="fill" textToIconAlign="center">
-      <BoundLabelBinding ord="$(device)">
-        <ObjectToString name="text" format="%displayName%"/>
-      </BoundLabelBinding>
-      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
-    </BoundLabel>
+    <ResponsivePane maxWidth="33.0%" minWidth="5.0%">
 
-  </ResponsivePane>
+      <BoundLabel name="content" font="bold 26.0pt SansSerif" foreground="#e0e0e0" halign="fill" valign="fill" textToIconAlign="center">
+        <BoundLabelBinding ord="$(device)">
+          <ObjectToString name="text" format="%displayName%"/>
+        </BoundLabelBinding>
+        <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+      </BoundLabel>
 
-  <ResponsivePane maxWidth="33.0%">
+    </ResponsivePane>
 
-    <CanvasPane name="content" viewSize="250.0,50.0" scale="fitRatio" minScaleFactor="0.25" maxScaleFactor="2.0" valign="fill">
+    <ResponsivePane maxWidth="33.0%">
 
-      <Picture image="file:^ANSW_SVG/Logos/White logo - no background - no words.png" scale="fitRatio" valign="top"/>
+      <CanvasPane name="content" viewSize="250.0,50.0" scale="fitRatio" minScaleFactor="0.25" maxScaleFactor="2.0" valign="fill">
 
-    </CanvasPane>
+        <Picture image="file:^ANSW_SVG/Logos/White logo - no background - no words.png" scale="fitRatio" valign="top"/>
 
-  </ResponsivePane>
+      </CanvasPane>
 
-</FlowPane>
+    </ResponsivePane>
+
+  </FlowPane>
+
+</BorderPane>
 </content>
 </px>
